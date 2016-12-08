@@ -1,7 +1,4 @@
-var prompt = require('prompt');
-//
-// Setting these properties customizes the prompt.
-//
+
 var prompt = require('prompt');
 //
 
@@ -30,6 +27,7 @@ prompt.get({
     }
     var arrayone = wordone.split("");
     var arraytwo = wordtwo.split("");
+    var arraydup = arraytwo.length;
     console.log(myFunction(arrayone, arraytwo));
       function myFunction(a, b) {
         for (i=0; i<a.length; i++) {
@@ -39,9 +37,9 @@ prompt.get({
 
               }
           }
-        }
-        if(arraytwo.length > 0){
-          return "not an anagram"
+        } 
+        if(arraytwo.length > 0 || (arrayone.length != arraydup)){
+          return "pah - not an anagram!"
           } else {
           return "anagram!";
         }
