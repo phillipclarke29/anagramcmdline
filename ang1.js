@@ -25,8 +25,8 @@ prompt.get({
       var wordtwo = result.secondword;
 
     }
-    var arrayone = wordone.split("").sort();
-    var arraytwo = wordtwo.split("").sort();
+    var arrayone = wordone.toLowerCase().split("").sort();
+    var arraytwo = wordtwo.toLowerCase().split("").sort();
 
     console.log(myFunction(arrayone, arraytwo));
       function myFunction(a, b) {
